@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Z.EntityFramework.Extensions</id>
+    <version>3.14.5</version>
+    <title>Z.EntityFramework.Extensions</title>
+    <authors>ZZZ Projects Inc.</authors>
+    <owners>ZZZ Projects Inc.</owners>
+    <licenseUrl>http://zzzprojects.com/license-agreement/</licenseUrl>
+    <projectUrl>http://entityframework-extensions.net/?z=nuget</projectUrl>
+    <iconUrl>https://zzzprojects.github.io/images/logo/logo-64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Entity Framework: Bulk Insert, BulkSaveChanges, Bulk Update, Bulk Delete, Bulk Merge, and Bulk Synchronize.
+
+Support: SQL Server, SQL Azure, SQL Compact, Oracle, MySQL, SQLite, and PostgreSQL.
+
+This library is NOT FREE. Trial period always stops at the end of the month.</description>
+    <summary>Entity Framework: Bulk Insert, BulkSaveChanges, Bulk Update, Bulk Delete, Bulk Merge, and Bulk Synchronize.
+
+Support: SQL Server, SQL Azure, SQL Compact, Oracle, MySQL, SQLite, and PostgreSQL.
+
+This library is NOT FREE. Trial period always stops at the end of the month.</summary>
+    <copyright>Copyright © ZZZ Projects Inc. 2014 - 2017</copyright>
+    <tags>Entity Framework Bulk Insert EntityFramework BulkInsert EF EF6 Batch Update Delete Merge BulkCopy SqlBulkCopy SaveChanges C#</tags>
+    <dependencies>
+      <dependency id="EntityFramework" version="6.0.0" />
+    </dependencies>
+  </metadata>
+</package>

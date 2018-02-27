@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="PassWord" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="IpPrice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Discount" Type="Double" Nullable="false" />
+    <Property Name="UseTime" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PicPath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="DeleteID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpireDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TelNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BuyTime" Type="DateTime" Precision="3" />
+    <Property Name="BuyMoney" Type="Double" />
+    <Property Name="TakeCount" Type="Int32" />
+    <Property Name="TakeNumber" Type="Int32" />
+    <Property Name="SumTakeCount" Type="Int32" />
+    <Property Name="SumTakeNumber" Type="Int32" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="DeleteId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VersionInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VersionNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VersionAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PartName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PartType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PartOwner" Type="Int32" Nullable="false" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="DeleteID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VPSInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RAM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Cpu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsOpen" Type="Int32" Nullable="false" />
+    <Property Name="HostName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IPIn" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IPOut" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="adminstrator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KDUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KDPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="DeleteID" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="IPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin" EntityType="Self.Admin" />
+    <EntitySet Name="IpPrice" EntityType="Self.IpPrice" />
+    <EntitySet Name="Order" EntityType="Self.Order" />
+    <EntitySet Name="VersionInfo" EntityType="Self.VersionInfo" />
+    <EntitySet Name="VPSInfo" EntityType="Self.VPSInfo" />
+    <EntitySet Name="NodeInfo" EntityType="IPModel.NodeInfo" />
+    <EntitySet Name="TaskRule" EntityType="IPModel.TaskRule" />
+    <EntitySet Name="CheckRule" EntityType="IPModel.CheckRule" />
+  </EntityContainer>
+  <EntityType Name="NodeInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HostId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Version" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="startTime" Type="DateTime" Precision="3" />
+    <Property Name="Endtime" Type="DateTime" Precision="3" />
+    <Property Name="ScanRate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ScanCount" Type="Int32" />
+    <Property Name="ScanSumCount" Type="Int32" />
+    <Property Name="IsOpen" Type="Int32" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="DeleteID" Type="Int32" />
+    <Property Name="NodeType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TaskRule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegIp" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegPort" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegAnonymous" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegCountry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="DeleteId" Type="Int32" />
+    <Property Name="Version" Type="Int32" />
+    <Property Name="RegCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegProvince" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ReqHead" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CollectCount" Type="Int32" />
+    <Property Name="CollectTime" Type="DateTime" Precision="3" />
+    <Property Name="LastCollectTime" Type="DateTime" Precision="3" />
+    <Property Name="IsValid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CheckRule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RegIp" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegPort" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegAnonymous" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegCountry" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegProvince" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="RegCity" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsDelete" Type="Int32" />
+    <Property Name="DeleteTime" Type="DateTime" Precision="3" />
+    <Property Name="DeleteId" Type="Int32" />
+    <Property Name="IsValid" Type="Int32" />
+  </EntityType>
+</Schema>

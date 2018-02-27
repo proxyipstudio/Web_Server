@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IPModelStoreContainer" CdmEntityContainer="IPEntities">
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="IPModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IpPrice">
+      <EntityTypeMapping TypeName="IPModel.IpPrice">
+        <MappingFragment StoreEntitySet="IpPrice">
+          <ScalarProperty Name="DeleteID" ColumnName="DeleteID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="UseTime" ColumnName="UseTime" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PicPath" ColumnName="PicPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="IPModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="TelNum" ColumnName="TelNum" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BuyTime" ColumnName="BuyTime" />
+          <ScalarProperty Name="BuyMoney" ColumnName="BuyMoney" />
+          <ScalarProperty Name="TakeCount" ColumnName="TakeCount" />
+          <ScalarProperty Name="TakeNumber" ColumnName="TakeNumber" />
+          <ScalarProperty Name="SumTakeCount" ColumnName="SumTakeCount" />
+          <ScalarProperty Name="SumTakeNumber" ColumnName="SumTakeNumber" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="DeleteId" ColumnName="DeleteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VersionInfo">
+      <EntityTypeMapping TypeName="IPModel.VersionInfo">
+        <MappingFragment StoreEntitySet="VersionInfo">
+          <ScalarProperty Name="DeleteID" ColumnName="DeleteID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="VersionAddress" ColumnName="VersionAddress" />
+          <ScalarProperty Name="PartName" ColumnName="PartName" />
+          <ScalarProperty Name="PartType" ColumnName="PartType" />
+          <ScalarProperty Name="PartOwner" ColumnName="PartOwner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VPSInfo">
+      <EntityTypeMapping TypeName="IPModel.VPSInfo">
+        <MappingFragment StoreEntitySet="VPSInfo">
+          <ScalarProperty Name="DeleteID" ColumnName="DeleteID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="KDPassword" ColumnName="KDPassword" />
+          <ScalarProperty Name="KDUser" ColumnName="KDUser" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="adminstrator" ColumnName="adminstrator" />
+          <ScalarProperty Name="IPOut" ColumnName="IPOut" />
+          <ScalarProperty Name="IPIn" ColumnName="IPIn" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="HostName" ColumnName="HostName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RAM" ColumnName="RAM" />
+          <ScalarProperty Name="Cpu" ColumnName="Cpu" />
+          <ScalarProperty Name="IsOpen" ColumnName="IsOpen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NodeInfo">
+      <EntityTypeMapping TypeName="IPModel.NodeInfo">
+        <MappingFragment StoreEntitySet="NodeInfo">
+          <ScalarProperty Name="NodeType" ColumnName="NodeType" />
+          <ScalarProperty Name="DeleteID" ColumnName="DeleteID" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="IsOpen" ColumnName="IsOpen" />
+          <ScalarProperty Name="ScanSumCount" ColumnName="ScanSumCount" />
+          <ScalarProperty Name="ScanCount" ColumnName="ScanCount" />
+          <ScalarProperty Name="ScanRate" ColumnName="ScanRate" />
+          <ScalarProperty Name="Endtime" ColumnName="Endtime" />
+          <ScalarProperty Name="startTime" ColumnName="startTime" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="HostId" ColumnName="HostId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskRule">
+      <EntityTypeMapping TypeName="IPModel.TaskRule">
+        <MappingFragment StoreEntitySet="TaskRule">
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="LastCollectTime" ColumnName="LastCollectTime" />
+          <ScalarProperty Name="CollectTime" ColumnName="CollectTime" />
+          <ScalarProperty Name="CollectCount" ColumnName="CollectCount" />
+          <ScalarProperty Name="ReqHead" ColumnName="ReqHead" />
+          <ScalarProperty Name="RegProvince" ColumnName="RegProvince" />
+          <ScalarProperty Name="RegCity" ColumnName="RegCity" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="DeleteId" ColumnName="DeleteId" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="RegCountry" ColumnName="RegCountry" />
+          <ScalarProperty Name="RegType" ColumnName="RegType" />
+          <ScalarProperty Name="RegAnonymous" ColumnName="RegAnonymous" />
+          <ScalarProperty Name="RegPort" ColumnName="RegPort" />
+          <ScalarProperty Name="RegIp" ColumnName="RegIp" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CheckRule">
+      <EntityTypeMapping TypeName="IPModel.CheckRule">
+        <MappingFragment StoreEntitySet="CheckRule">
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="DeleteId" ColumnName="DeleteId" />
+          <ScalarProperty Name="DeleteTime" ColumnName="DeleteTime" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="RegCity" ColumnName="RegCity" />
+          <ScalarProperty Name="RegProvince" ColumnName="RegProvince" />
+          <ScalarProperty Name="RegCountry" ColumnName="RegCountry" />
+          <ScalarProperty Name="RegType" ColumnName="RegType" />
+          <ScalarProperty Name="RegAnonymous" ColumnName="RegAnonymous" />
+          <ScalarProperty Name="RegPort" ColumnName="RegPort" />
+          <ScalarProperty Name="RegIp" ColumnName="RegIp" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

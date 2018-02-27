@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="userName" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="PassWord" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="DeleteTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CheckRule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Url" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="RegIp" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegPort" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegAnonymous" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegType" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegCountry" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegProvince" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegCity" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="DeleteTime" Type="datetime" />
+    <Property Name="DeleteId" Type="int" />
+    <Property Name="IsValid" Type="int" />
+  </EntityType>
+  <EntityType Name="IpPrice">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Discount" Type="float" Nullable="false" />
+    <Property Name="UseTime" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="PicPath" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="DeleteTime" Type="datetime" />
+    <Property Name="DeleteID" Type="int" />
+  </EntityType>
+  <EntityType Name="NodeInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HostId" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Version" Type="nvarchar" MaxLength="20" />
+    <Property Name="startTime" Type="datetime" />
+    <Property Name="Endtime" Type="datetime" />
+    <Property Name="ScanRate" Type="nvarchar" MaxLength="20" />
+    <Property Name="ScanCount" Type="int" />
+    <Property Name="ScanSumCount" Type="int" />
+    <Property Name="IsOpen" Type="int" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="DeleteTime" Type="datetime" />
+    <Property Name="DeleteID" Type="int" />
+    <Property Name="NodeType" Type="int" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpireDate" Type="datetime" Nullable="false" />
+    <Property Name="TelNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BuyTime" Type="datetime" />
+    <Property Name="BuyMoney" Type="float" />
+    <Property Name="TakeCount" Type="int" />
+    <Property Name="TakeNumber" Type="int" />
+    <Property Name="SumTakeCount" Type="int" />
+    <Property Name="SumTakeNumber" Type="int" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="DeleteTime" Type="datetime" />
+    <Property Name="DeleteId" Type="int" />
+  </EntityType>
+  <EntityType Name="TaskRule">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Url" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="RegIp" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegPort" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegAnonymous" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegType" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegCountry" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegCity" Type="nvarchar" MaxLength="500" />
+    <Property Name="RegProvince" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="DeleteTime" Type="datetime" />
+    <Property Name="DeleteId" Type="int" />
+    <Property Name="Version" Type="int" />
+    <Property Name="ReqHead" Type="nvarchar(max)" />
+    <Property Name="CollectCount" Type="int" />
+    <Property Name="CollectTime" Type="datetime" />
+    <Property Name="LastCollectTime" Type="datetime" />
+    <Property Name="IsValid" Type="int" />
+  </EntityType>
+  <EntityType Name="VersionInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VersionNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="VersionAddress" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="PartName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PartType" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PartOwner" Type="int" Nullable="false" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="DeleteTime" Type="datetime" />
+    <Property Name="DeleteID" Type="int" />
+  </EntityType>
+  <EntityType Name="VPSInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RAM" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cpu" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsOpen" Type="int" Nullable="false" />
+    <Property Name="HostName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SerialNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="IPIn" Type="nvarchar" MaxLength="20" />
+    <Property Name="IPOut" Type="nvarchar" MaxLength="20" />
+    <Property Name="adminstrator" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="KDUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="KDPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsDelete" Type="int" />
+    <Property Name="DeleteTime" Type="datetime" />
+    <Property Name="DeleteID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="IPModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CheckRule" EntityType="Self.CheckRule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IpPrice" EntityType="Self.IpPrice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NodeInfo" EntityType="Self.NodeInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaskRule" EntityType="Self.TaskRule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VersionInfo" EntityType="Self.VersionInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VPSInfo" EntityType="Self.VPSInfo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
